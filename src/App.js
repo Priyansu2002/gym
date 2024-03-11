@@ -6,6 +6,8 @@ import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   return (
@@ -13,7 +15,8 @@ const App = () => {
         <Navbar />
       <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sign-up" element={<SignUp />} />
             <Route path="/exercise/:id" element={<ExerciseDetail />} />
         </Routes>
         <Footer />
