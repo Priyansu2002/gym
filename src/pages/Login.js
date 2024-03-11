@@ -8,12 +8,42 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-
+import { auth, db } from "../utils/config";
+import { signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
-  const handleSubmit = (event) => {};
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get("email"),
+      password: data.get("password"),
+    });
+
+    const email = data.get("email");
+    const password = data.get("password");
+
+    const result = await signInWithEmailAndPassword(auth, email, password);
+
+    const q = query(collection(db, "users"), where("email", "==", email));
+    const querySnapshot = await getDocs(q);
+    console.log(result);
+    querySnapshot.forEach(async (doc) => {
+      const { firstName, lastName } = doc.data();
+      await updateProfile(auth.currentUser, {
+        displayName: firstName + " " + lastName,
+      });
+    });
+
+    navigate("/");
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -79,6 +109,7 @@ const Login = () => {
           </Grid>
         </Box>
       </Box>
+      <button onClick={() => console.log(auth.currentUser)}>click</button>
     </Container>
   );
 };
