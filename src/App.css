@@ -1,5 +1,5 @@
 body {
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   background: linear-gradient(to bottom, #fff, #fff);
 }
 
@@ -14,14 +14,15 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FF2625;
+  background: #ff2625;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF5555;
+  background: #ff5555;
 }
 
-.right-arrow, .left-arrow {
+.right-arrow,
+.left-arrow {
   cursor: pointer;
   background: transparent;
   outline: none;
@@ -29,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FF2625;
+  color: #ff2625;
   font-size: 25px;
   border-radius: 4px;
   position: absolute;
@@ -43,7 +44,8 @@ body {
   right: 140px;
 }
 
-.right-arrow:hover, .left-arrow:hover {
+.right-arrow:hover,
+.left-arrow:hover {
   transform: scale(1.2, 1.2);
 }
 
@@ -69,7 +71,8 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -82,7 +85,7 @@ body {
   height: 445px;
   background: #fff;
   border: 1px solid #000; /* Add a 1px black border on every side */
-  border-top: 4px solid #FF2625;
+  border-top: 4px solid #ff2625;
   border-bottom-left-radius: 20px;
   text-decoration: none;
   display: flex;
@@ -114,8 +117,8 @@ body {
 }
 
 .search-btn:hover {
-  color: #FF2625 !important;
-  border: 1px solid #FF2625 !important;
+  color: #ff2625 !important;
+  border: 1px solid #ff2625 !important;
 }
 
 .exercise-video {
@@ -138,13 +141,14 @@ body {
     margin-top: 40px;
   }
 
-  .left-arrow, .right-arrow {
+  .left-arrow,
+  .right-arrow {
     position: static !important;
   }
 
   .hero-banner-img {
     display: none;
-    height:200px;
+    height: 200px;
     width: 200px;
   }
 
@@ -162,4 +166,22 @@ body {
   .exercise-card {
     width: 280px;
   }
+}
+
+.exercise-table-row {
+  /* margin: 5px 0; */
+  padding: 3px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.space-2 {
+  display: flex;
+  gap: 0.5em;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
