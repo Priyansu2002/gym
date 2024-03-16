@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import Dialog from "@mui/material/Dialog";
@@ -8,8 +8,6 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
 import Box from "@mui/material/Box";
-
-import Typography from "@mui/material/Typography";
 
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
@@ -23,8 +21,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
 import Chip from "@mui/material/Chip";
-import Paper from "@mui/material/Paper";
-import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -59,6 +55,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import PreviewIcon from "@mui/icons-material/Preview";
 import ModalBox from "./ModalBox";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { db } from "../utils/config";
 
 const parts = [
   "back",
@@ -73,16 +71,43 @@ const parts = [
   "waist",
 ];
 
-function ExercisesModal({ open, handleClose }) {
+function ExercisesModal({ day, open, handleClose }) {
   const [partsName, setPartsName] = React.useState([]);
+  //
   const [selectedExercises, setSelectedExercises] = React.useState([]);
   const [selectedExercisesName, setSelectedExercisesName] = React.useState([]);
+  //
   const [value, setValue] = React.useState(0);
   const [previewOpen, setPreviewOpen] = React.useState(false);
   const [exerciseDetails, setExerciseDetails] = React.useState({});
 
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  useEffect(() => {
+    async function fetch() {
+      if (day === "") return;
+      const userId = localStorage.getItem("email");
+      const taskRef = doc(db, `users/${userId}/tasks`, day);
+      const taskSnapshot = await getDoc(taskRef);
+      if (taskSnapshot.exists()) {
+        const taskData = taskSnapshot.data();
+        setSelectedExercisesName(taskData.selectedExercisesName);
+        setSelectedExercises(taskData.selectedExercisesId);
+      }
+    }
+    fetch();
+  }, [day]);
+
+  const handleSubmit = async (event) => {
+    const userId = localStorage.getItem("email");
+    const taskRef = doc(db, `users/${userId}/tasks`, day);
+    await setDoc(taskRef, {
+      selectedExercisesId: selectedExercises,
+      selectedExercisesName,
+    });
+    handleClose();
+  };
 
   const handleChange = (event) => {
     const {
@@ -232,7 +257,7 @@ function ExercisesModal({ open, handleClose }) {
         <Button autoFocus onClick={handleClose}>
           Disagree
         </Button>
-        <Button onClick={handleClose} autoFocus>
+        <Button onClick={handleSubmit} autoFocus>
           Agree
         </Button>
       </DialogActions>

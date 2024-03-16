@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -13,11 +14,12 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { collection, addDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 
 import { auth, db } from "../utils/config";
 
 export default function SignUp() {
+  const naviagte = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -35,12 +37,14 @@ export default function SignUp() {
       );
       console.log(response.user);
 
-      const docRef = await addDoc(collection(db, "users"), {
+      const userRef = doc(db, `users`, email);
+      await setDoc(userRef, {
         firstName,
         lastName,
         email,
       });
-      console.log(docRef);
+
+      naviagte("/");
     } catch (err) {
       console.log(err);
     }

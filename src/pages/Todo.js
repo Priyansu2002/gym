@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   TableContainer,
@@ -12,19 +12,62 @@ import Chip from "@mui/material/Chip";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import ExercisesModal from "../components/ExercisesModal";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../utils/config";
 
+const daysOfWeek = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
 const Todo = () => {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [day, setDay] = React.useState("");
+  const [rows, setRows] = React.useState([]);
 
-  function createData(name, exercise, time) {
-    return { name, exercise, time };
-  }
-  const rows = [
-    createData("Monday", ["exercise", "part"], "08:00:00"),
-    createData("Tuesday", ["exercise", "part"], "08:00:00"),
-  ];
+  useEffect(() => {
+    const fetchAllTasks = async () => {
+      const userId = localStorage.getItem("email");
+      const tasksRef = collection(db, `users/${userId}/tasks`);
+
+      // Query all documents within the tasks collection
+      const querySnapshot = await getDocs(tasksRef);
+
+      const tasks = [];
+      querySnapshot.forEach((doc) => {
+        tasks.push({ id: doc.id, ...doc.data() });
+      });
+      // console.log(tasks);
+      let store = [];
+      for (let day of daysOfWeek) {
+        const tasks_ref = tasks.filter((task) => task.id === day);
+        if (tasks_ref.length > 0) {
+          store.push(tasks_ref[0]);
+        } else {
+          store.push({
+            id: day,
+            selectedExercisesName: [],
+            selectedExercisesId: [],
+          });
+        }
+      }
+
+      setRows(store);
+    };
+    fetchAllTasks();
+  }, [day]);
+  const handleOpen = (day) => {
+    setOpen(true);
+    setDay(day);
+  };
+  const handleClose = () => {
+    setOpen(false);
+    setDay("");
+  };
 
   // const handleDelete = (id) => {
   //   console.info("You clicked the delete icon.", id);
@@ -48,16 +91,21 @@ const Todo = () => {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.name}
+                  {row.id}
                 </TableCell>
                 <TableCell align="right">
                   <div>
-                    {row.exercise.map((exercise, id) => (
+                    {row?.selectedExercisesName.map((exercise, id) => (
                       <Chip key={id} label={exercise} />
                     ))}
-                    <Button variant="outlined" onClick={handleOpen}>
-                      Add
-                    </Button>
+                    <div>
+                      <Button
+                        variant="outlined"
+                        onClick={() => handleOpen(row.id)}
+                      >
+                        Add
+                      </Button>
+                    </div>
                   </div>
                 </TableCell>
                 <TableCell align="right">
@@ -68,7 +116,7 @@ const Todo = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <ExercisesModal {...{ open, handleClose }} />
+      <ExercisesModal {...{ day, open, handleClose }} />
     </div>
   );
 };

@@ -29,20 +29,22 @@ const Login = () => {
 
     const email = data.get("email");
     const password = data.get("password");
-
-    const result = await signInWithEmailAndPassword(auth, email, password);
-
-    const q = query(collection(db, "users"), where("email", "==", email));
-    const querySnapshot = await getDocs(q);
-    console.log(result);
-    querySnapshot.forEach(async (doc) => {
-      const { firstName, lastName } = doc.data();
-      await updateProfile(auth.currentUser, {
-        displayName: firstName + " " + lastName,
+    try {
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      const q = query(collection(db, "users"), where("email", "==", email));
+      const querySnapshot = await getDocs(q);
+      console.log(result);
+      querySnapshot.forEach(async (doc) => {
+        const { firstName, lastName } = doc.data();
+        await updateProfile(auth.currentUser, {
+          displayName: firstName + " " + lastName,
+        });
       });
-    });
-
-    navigate("/");
+      localStorage.setItem("email", email);
+      navigate("/");
+    } catch (err) {
+      console.log(err.code);
+    }
   };
 
   return (
