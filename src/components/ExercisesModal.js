@@ -92,8 +92,8 @@ function ExercisesModal({ day, open, handleClose }) {
       const taskSnapshot = await getDoc(taskRef);
       if (taskSnapshot.exists()) {
         const taskData = taskSnapshot.data();
-        setSelectedExercisesName(taskData.selectedExercisesName);
-        setSelectedExercises(taskData.selectedExercisesId);
+        setSelectedExercisesName(taskData?.selectedExercisesName || []);
+        setSelectedExercises(taskData?.selectedExercisesId || []);
       }
     }
     fetch();
@@ -102,10 +102,14 @@ function ExercisesModal({ day, open, handleClose }) {
   const handleSubmit = async (event) => {
     const userId = localStorage.getItem("email");
     const taskRef = doc(db, `users/${userId}/tasks`, day);
-    await setDoc(taskRef, {
-      selectedExercisesId: selectedExercises,
-      selectedExercisesName,
-    });
+    await setDoc(
+      taskRef,
+      {
+        selectedExercisesId: selectedExercises,
+        selectedExercisesName,
+      },
+      { merge: true }
+    );
     handleClose();
   };
 
@@ -249,7 +253,7 @@ function ExercisesModal({ day, open, handleClose }) {
           <img src={exerciseDetails.gifUrl} alt="gif" width={200} />
           <p>{exerciseDetails.name}</p>
           <div align="right">
-            <Button onClick={handleClose}>close</Button>
+            <Button onClick={handlePreviewClose}>close</Button>
           </div>
         </ModalBox>
       </DialogContent>

@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 
 const style = {
   position: "absolute",
@@ -21,8 +20,8 @@ const ModalBox = ({ children, open, handleClose }) => {
     <Modal
       open={open}
       onClose={handleClose}
-      aria-labelledby="modal-title"
-      aria-describedby="modal-description"
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
     >
       <Box sx={{ ...style, width: 300 }}>{children}</Box>
     </Modal>
