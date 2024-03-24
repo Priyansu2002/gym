@@ -1,9 +1,22 @@
+import {
+  back_0007,
+  back_0015,
+  back_0017,
+  back_0970,
+  back_1314,
+  back_1405,
+  back_1431,
+  back_1432,
+  back_3293,
+  back_3297,
+} from "../assets/exercises_image/back";
+
 const exercisesDataByParts = {
   back: [
     {
       bodyPart: "back",
       equipment: "cable",
-      gifUrl: "https://v2.exercisedb.io/image/oGoxZi4fmy0Ayi",
+      gifUrl: back_0007,
       id: "0007",
       name: "alternate lateral pulldown",
       target: "lats",
@@ -19,7 +32,7 @@ const exercisesDataByParts = {
     {
       bodyPart: "back",
       equipment: "body weight",
-      gifUrl: "https://v2.exercisedb.io/image/X0UeXzjonI7FNJ",
+      gifUrl: back_3293,
       id: "3293",
       name: "archer pull up",
       target: "lats",
@@ -40,7 +53,7 @@ const exercisesDataByParts = {
 
       equipment: "leverage machine",
 
-      gifUrl: "https://v2.exercisedb.io/image/jvnAK1UWPYnSa7",
+      gifUrl: back_0015,
 
       id: "0015",
 
@@ -67,7 +80,7 @@ const exercisesDataByParts = {
 
       equipment: "leverage machine",
 
-      gifUrl: "https://v2.exercisedb.io/image/PkGhPawWOSHhs6",
+      gifUrl: back_0017,
 
       id: "0017",
 
@@ -94,7 +107,7 @@ const exercisesDataByParts = {
 
       equipment: "leverage machine",
 
-      gifUrl: "https://v2.exercisedb.io/image/mgUVlgT6-e22Y1",
+      gifUrl: back_1431,
 
       id: "1431",
 
@@ -121,7 +134,7 @@ const exercisesDataByParts = {
 
       equipment: "leverage machine",
 
-      gifUrl: "https://v2.exercisedb.io/image/u08HfNoepMlnNr",
+      gifUrl: back_1432,
 
       id: "1432",
 
@@ -148,7 +161,7 @@ const exercisesDataByParts = {
 
       equipment: "stability ball",
 
-      gifUrl: "https://v2.exercisedb.io/image/Gq5033yNa6wW7A",
+      gifUrl: back_1314,
 
       id: "1314",
 
@@ -175,7 +188,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/rF9AmP6d4uViqy",
+      gifUrl: back_3297,
 
       id: "3297",
 
@@ -201,7 +214,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/fZ9zpXayX8pTlo",
+      gifUrl: back_1405,
 
       id: "1405",
 
@@ -228,7 +241,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/R6m7YNB4bdtgcG",
+      gifUrl: back_0970,
 
       id: "0970",
 
