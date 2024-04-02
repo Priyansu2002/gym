@@ -163,13 +163,13 @@ function ExercisesModal({ day, open, handleClose }) {
       aria-labelledby="responsive-dialog-title"
     >
       <DialogTitle id="responsive-dialog-title">
-        {"Use Google's location service?"}
+        {"Welcome to Gym Todo List Selecter"}
       </DialogTitle>
 
       <DialogContent>
         <DialogContentText>
-          Let Google help apps determine location. This means sending anonymous
-          location data to Google, even when no apps are running.
+          Explore a New Fitness Adventure with Our Gym Todo List Selector,
+          Tailored to Your Goals and Preferences.
         </DialogContentText>
         <Box>
           <FormControl sx={{ m: 1, width: 300 }}>
