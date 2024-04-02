@@ -27,29 +27,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import exercisesDataByParts from "../utils/data";
 
-// const style = {
-//   position: "absolute",
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   //   width: 400,
-//   bgcolor: "background.paper",
-//   border: "2px solid #000",
-//   boxShadow: 24,
-//   p: 4,
-// };
-
-// const ITEM_HEIGHT = 48;
-// const ITEM_PADDING_TOP = 8;
-// const MenuProps = {
-//   PaperProps: {
-//     style: {
-//       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-//       width: 250,
-//     },
-//   },
-// };
-
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
@@ -172,7 +149,7 @@ function ExercisesModal({ day, open, handleClose }) {
           Tailored to Your Goals and Preferences.
         </DialogContentText>
         <Box>
-          <FormControl sx={{ m: 1, width: 300 }}>
+          <FormControl sx={{ mt: 1, mb: 1, width: "100%" }}>
             <InputLabel id="demo-multiple-checkbox-label">
               Select Parts
             </InputLabel>
@@ -186,7 +163,7 @@ function ExercisesModal({ day, open, handleClose }) {
               renderValue={(selected) =>
                 selected.map((select, i) => <Chip key={i} label={select} />)
               }
-              // MenuProps={MenuProps}
+              // style={{ width: "100%" }}
             >
               {parts.map((name) => (
                 <MenuItem key={name} value={name}>
@@ -198,7 +175,7 @@ function ExercisesModal({ day, open, handleClose }) {
           </FormControl>
           <Box>
             {selectedExercisesName.map((name, id) => (
-              <Chip label={name} key={id} />
+              <Chip label={name} key={id} style={{ margin: "2px 2px" }} />
             ))}
           </Box>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>

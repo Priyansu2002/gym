@@ -30,10 +30,10 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       );
 
       console.log(typeof exercisesData);
-      // if (typeof exerciseOptions !== "array") {
-      //   return
-      // }
-      console.log(exerciseOptions);
+      if (!Array.isArray(exercisesData)) {
+        return alert("No exercise Found");
+      }
+
       const searchedExercises = exercisesData.filter(
         (item) =>
           item.name.toLowerCase().includes(search) ||
