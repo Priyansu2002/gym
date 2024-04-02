@@ -22,6 +22,18 @@ import {
   cardio_3636,
   cardio_3672,
 } from "../assets/exercises_image/cardio";
+import {
+  chest_0009,
+  chest_0025,
+  chest_0033,
+  chest_0036,
+  chest_0989,
+  chest_1254,
+  chest_1255,
+  chest_1716,
+  chest_2364,
+  chest_3294,
+} from "../assets/exercises_image/chest";
 
 const exercisesDataByParts = {
   back: [
@@ -560,7 +572,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/1Bhgj8xGVOKk2N",
+      gifUrl: chest_3294,
 
       id: "3294",
 
@@ -586,7 +598,7 @@ const exercisesDataByParts = {
 
       equipment: "leverage machine",
 
-      gifUrl: "https://v2.exercisedb.io/image/1U0IW1b5YnKhea",
+      gifUrl: chest_0009,
 
       id: "0009",
 
@@ -612,7 +624,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/5ikHrbMGE26aS6",
+      gifUrl: chest_1716,
 
       id: "1716",
 
@@ -640,7 +652,7 @@ const exercisesDataByParts = {
 
       equipment: "leverage machine",
 
-      gifUrl: "https://v2.exercisedb.io/image/dJ1K3LUpwLMiko",
+      gifUrl: chest_2364,
 
       id: "2364",
 
@@ -666,7 +678,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/jUbPHXWgD2t3cr",
+      gifUrl: chest_1254,
 
       id: "1254",
 
@@ -694,7 +706,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/126YbpeFx-a6S8",
+      gifUrl: chest_0989,
 
       id: "0989",
 
@@ -722,7 +734,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/Xl291IYibXNPAr",
+      gifUrl: chest_0025,
 
       id: "0025",
 
@@ -749,7 +761,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/GzEeAYAdDmrq7l",
+      gifUrl: chest_0033,
 
       id: "0033",
 
@@ -777,7 +789,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/XdoOjGDrD2ZLSk",
+      gifUrl: chest_1255,
 
       id: "1255",
 
@@ -803,7 +815,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/2U1JLuvXDy5u13",
+      gifUrl: chest_0036,
 
       id: "0036",
 
