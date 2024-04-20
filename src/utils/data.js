@@ -34,6 +34,80 @@ import {
   chest_2364,
   chest_3294,
 } from "../assets/exercises_image/chest";
+import {
+  lowerArm_0079,
+  lowerArm_0082,
+  lowerArm_0104,
+  lowerArm_0125,
+  lowerArm_0126,
+  lowerArm_0210,
+  lowerArm_0994,
+  lowerArm_1016,
+  lowerArm_1411,
+  lowerArm_1412,
+} from "../assets/exercises_image/lowerArms";
+import {
+  lowerLeg_0088,
+  lowerLeg_0108,
+  lowerLeg_0999,
+  lowerLeg_1000,
+  lowerLeg_1368,
+  lowerLeg_1369,
+  lowerLeg_1370,
+  lowerLeg_1371,
+  lowerLeg_1372,
+  lowerLeg_1708,
+} from "../assets/exercises_image/lowerLegs";
+import { neck_0716, neck_1403 } from "../assets/exercises_image/necks";
+import {
+  shoulder_0041,
+  shoulder_0067,
+  shoulder_0075,
+  shoulder_0977,
+  shoulder_0978,
+  shoulder_0993,
+  shoulder_0997,
+  shoulder_1012,
+  shoulder_1017,
+  shoulder_1022,
+} from "../assets/exercises_image/shoulders";
+import {
+  upperArm_0018,
+  upperArm_0019,
+  upperArm_0023,
+  upperArm_0030,
+  upperArm_0968,
+  upperArm_0975,
+  upperArm_0976,
+  upperArm_0986,
+  upperArm_0998,
+  upperArm_2407,
+} from "../assets/exercises_image/upperArms";
+import {
+  upperLeg_0016,
+  upperLeg_0020,
+  upperLeg_0980,
+  upperLeg_1473,
+  upperLeg_1512,
+  upperLeg_1573,
+  upperLeg_1709,
+  upperLeg_1710,
+  upperLeg_1712,
+  upperLeg_1713,
+  upperLeg_3214,
+} from "../assets/exercises_image/upperLegs";
+import {
+  waist_0001,
+  waist_0002,
+  waist_0003,
+  waist_0006,
+  waist_0010,
+  waist_0011,
+  waist_0012,
+  waist_2333,
+  waist_2355,
+  waist_3204,
+} from "../assets/exercises_image/waists";
 
 const exercisesDataByParts = {
   back: [
@@ -843,7 +917,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/aDRog52Zxqpf4a",
+      gifUrl: lowerArm_0994,
 
       id: "0994",
 
@@ -869,7 +943,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/hIUHY06dNFQoXd",
+      gifUrl: lowerArm_1016,
 
       id: "1016",
 
@@ -897,7 +971,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/dE1WvTddC7ywZA",
+      gifUrl: lowerArm_1411,
 
       id: "1411",
 
@@ -924,7 +998,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/8TkFdjjIyGGJlT",
+      gifUrl: lowerArm_1412,
 
       id: "1412",
 
@@ -951,7 +1025,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/lONg7PsB6tQlKJ",
+      gifUrl: lowerArm_0079,
 
       id: "0079",
 
@@ -977,7 +1051,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/pAWSa02zaPL1F-",
+      gifUrl: lowerArm_0082,
 
       id: "0082",
 
@@ -1004,7 +1078,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/hjETVK6LbmpRGp",
+      gifUrl: lowerArm_0104,
 
       id: "0104",
 
@@ -1032,7 +1106,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/jVed0JTRkXwfs5",
+      gifUrl: lowerArm_0126,
 
       id: "0126",
 
@@ -1059,7 +1133,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/-31-rtXxUrGxeR",
+      gifUrl: lowerArm_0125,
 
       id: "0125",
 
@@ -1085,7 +1159,7 @@ const exercisesDataByParts = {
 
       equipment: "cable",
 
-      gifUrl: "https://v2.exercisedb.io/image/rAij5iK8fmtJFU",
+      gifUrl: lowerArm_0210,
 
       id: "0210",
 
@@ -1113,7 +1187,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/SwmTfmcLWWr1gg",
+      gifUrl: lowerLeg_1368,
 
       id: "1368",
 
@@ -1138,7 +1212,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/OVbl76LbIPfEoB",
+      gifUrl: lowerLeg_1708,
 
       id: "1708",
 
@@ -1164,7 +1238,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/vj8UPnuUxEnlQ7",
+      gifUrl: lowerLeg_0999,
 
       id: "0999",
 
@@ -1191,7 +1265,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/s3EaCtfWPNigie",
+      gifUrl: lowerLeg_1000,
 
       id: "1000",
 
@@ -1218,7 +1292,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/vIL9Cu4WFb6e08",
+      gifUrl: lowerLeg_1369,
 
       id: "1369",
 
@@ -1245,7 +1319,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/9GoFceXu2Mp74a",
+      gifUrl: lowerLeg_1370,
 
       id: "1370",
 
@@ -1271,7 +1345,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/KUe15RGM4n1045",
+      gifUrl: lowerLeg_0088,
 
       id: "0088",
 
@@ -1297,7 +1371,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/FKLmUqZ7y0thGC",
+      gifUrl: lowerLeg_1371,
 
       id: "1371",
 
@@ -1323,7 +1397,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/qfV-ub7XOetFRG",
+      gifUrl: lowerLeg_1372,
 
       id: "1372",
 
@@ -1348,7 +1422,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/hcQTjkJjoDocw9",
+      gifUrl: lowerLeg_0108,
 
       id: "0108",
 
@@ -1375,7 +1449,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/DdvzvlFwtjCM1F",
+      gifUrl: neck_1403,
 
       id: "1403",
 
@@ -1400,7 +1474,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/cn6Afje6wpD9ym",
+      gifUrl: neck_0716,
 
       id: "0716",
 
@@ -1428,7 +1502,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/TGAxHHYowX6hgI",
+      gifUrl: shoulder_0977,
 
       id: "0977",
 
@@ -1454,7 +1528,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/30N3JhGQaT824h",
+      gifUrl: shoulder_0978,
 
       id: "0978",
 
@@ -1480,7 +1554,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/UZDF5wfelkOkxf",
+      gifUrl: shoulder_0993,
 
       id: "0993",
 
@@ -1506,7 +1580,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/329VMg5rSOugdB",
+      gifUrl: shoulder_0997,
 
       id: "0997",
 
@@ -1534,7 +1608,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/uR0Y9akCGj9XY3",
+      gifUrl: shoulder_1022,
 
       id: "1022",
 
@@ -1560,7 +1634,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/cQi-bP0aeUiZu8",
+      gifUrl: shoulder_1012,
 
       id: "1012",
 
@@ -1587,7 +1661,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/-74ooRg9AquZ6S",
+      gifUrl: shoulder_1017,
 
       id: "1017",
 
@@ -1614,7 +1688,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/Cg5t2EIjIjjFrs",
+      gifUrl: shoulder_0041,
 
       id: "0041",
 
@@ -1640,7 +1714,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/mrlLY2MrIABeGd",
+      gifUrl: shoulder_0067,
 
       id: "0067",
 
@@ -1668,7 +1742,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/xTyP3qA-2R2Hwj",
+      gifUrl: shoulder_0075,
 
       id: "0075",
 
@@ -1698,7 +1772,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/kBdkDK-EcE04ll",
+      gifUrl: upperArm_0018,
 
       id: "0018",
 
@@ -1725,7 +1799,7 @@ const exercisesDataByParts = {
 
       equipment: "leverage machine",
 
-      gifUrl: "https://v2.exercisedb.io/image/4yT2YPVhdckNwQ",
+      gifUrl: upperArm_0019,
 
       id: "0019",
 
@@ -1752,7 +1826,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/1YAEcPZnj393Rx",
+      gifUrl: upperArm_0968,
 
       id: "0968",
 
@@ -1778,7 +1852,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/2WCSgNODUjoM8X",
+      gifUrl: upperArm_0975,
 
       id: "0975",
 
@@ -1806,7 +1880,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/TVGf7wVJiFoyii",
+      gifUrl: upperArm_0976,
 
       id: "0976",
 
@@ -1832,7 +1906,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/gqCpFw0uOa-pYb",
+      gifUrl: upperArm_0986,
 
       id: "0986",
 
@@ -1860,7 +1934,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/hRw2j5lrshmODa",
+      gifUrl: upperArm_0998,
 
       id: "0998",
 
@@ -1887,7 +1961,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/ksIfcG6moUmrBK",
+      gifUrl: upperArm_0023,
 
       id: "0023",
 
@@ -1913,7 +1987,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/f5iUcfEGLhs6Uf",
+      gifUrl: upperArm_2407,
 
       id: "2407",
 
@@ -1940,7 +2014,7 @@ const exercisesDataByParts = {
 
       equipment: "barbell",
 
-      gifUrl: "https://v2.exercisedb.io/image/RroRFFklrSQteT",
+      gifUrl: upperArm_0030,
 
       id: "0030",
 
@@ -1968,7 +2042,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/L4Ypk2yPvLbIw6",
+      gifUrl: upperLeg_1512,
 
       id: "1512",
 
@@ -1994,7 +2068,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/m8L84Jabg1Uz5O",
+      gifUrl: upperLeg_3214,
 
       id: "3214",
 
@@ -2022,7 +2096,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/Y5XdBVNPpkKG1y",
+      gifUrl: upperLeg_1709,
 
       id: "1709",
 
@@ -2049,7 +2123,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/QXIEbtSrFJgzYd",
+      gifUrl: upperLeg_1710,
 
       id: "1710",
 
@@ -2076,7 +2150,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/f4gvQK6W7IpwMk",
+      gifUrl: upperLeg_0016,
 
       id: "0016",
 
@@ -2103,7 +2177,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/--S-FbY6TC7uj6",
+      gifUrl: upperLeg_1713,
 
       id: "1713",
 
@@ -2130,7 +2204,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/8NaUWYfCxpNBYZ",
+      gifUrl: upperLeg_1712,
 
       id: "1712",
 
@@ -2156,7 +2230,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/J8rHvodcBUIeMa",
+      gifUrl: upperLeg_1473,
 
       id: "1473",
 
@@ -2181,7 +2255,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/6CMtOY1QsqAlmh",
+      gifUrl: upperLeg_0020,
 
       id: "0020",
 
@@ -2208,7 +2282,7 @@ const exercisesDataByParts = {
 
       equipment: "band",
 
-      gifUrl: "https://v2.exercisedb.io/image/yAMKhXlOjRydBf",
+      gifUrl: upperLeg_0980,
 
       id: "0980",
 
@@ -2237,7 +2311,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/oFXhSPKVqh4eIE",
+      gifUrl: waist_0001,
 
       id: "0001",
 
@@ -2264,7 +2338,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/pCyT38haR5GUx5",
+      gifUrl: waist_0002,
 
       id: "0002",
 
@@ -2291,7 +2365,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/yRAN0seQwX1ZMA",
+      gifUrl: waist_0003,
 
       id: "0003",
 
@@ -2318,7 +2392,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/DyOBbTOYi8zRaA",
+      gifUrl: waist_0006,
 
       id: "0006",
 
@@ -2345,7 +2419,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/YikovYEocVeeXW",
+      gifUrl: waist_2355,
 
       id: "2355",
 
@@ -2370,7 +2444,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/bzxTqs1gpw4kaJ",
+      gifUrl: waist_2333,
 
       id: "2333",
 
@@ -2396,7 +2470,7 @@ const exercisesDataByParts = {
 
       equipment: "body weight",
 
-      gifUrl: "https://v2.exercisedb.io/image/tdW1d6NZcVD12v",
+      gifUrl: waist_3204,
 
       id: "3204",
 
@@ -2423,7 +2497,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/avPdLqzyrMeJqu",
+      gifUrl: waist_0011,
 
       id: "0011",
 
@@ -2450,7 +2524,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/Tz1ro1TXMcTPQR",
+      gifUrl: waist_0010,
 
       id: "0010",
 
@@ -2476,7 +2550,7 @@ const exercisesDataByParts = {
 
       equipment: "assisted",
 
-      gifUrl: "https://v2.exercisedb.io/image/q8b31KQGa2sWNj",
+      gifUrl: waist_0012,
 
       id: "0012",
 
